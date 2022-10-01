@@ -3,6 +3,25 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #8B8BBB;
+}
+
+.navbar {
+  background-color: #231123;
+}
+
+.navbar a {
+  color: white;
+}
+
+.jumbotron, .card, .note-title, .note-textarea{
+  color: #372554;
+  background-color: #CACAAA;
+  border: 5px solid #231123;
+}
+
+::placeholder {
+  color: #494331;
 }
 
 .save-note {
@@ -46,6 +65,7 @@ body {
   border-bottom: none;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: transparent;
 }
 
 .list-container {
@@ -75,4 +95,5 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  background-color: #CACAAA;
 }
