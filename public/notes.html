@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -16,9 +17,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
   </head>
 
   <body>
+
     <nav class="navbar">
       <a class="navbar-brand" href="/">Note Taker </a>
       <div class="icons">
@@ -30,18 +33,13 @@
     <main id="main">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 col-md-4 list-container">
+          <div class="col-12 col-md-4 list-container" id="noteList">
             <div class="card">
               <ul class="list-group"></ul>
             </div>
           </div>
-          <div class="col-8">
-            <input
-              class="note-title"
-              placeholder="Note Title"
-              maxlength="28"
-              type="text"
-            />
+          <div class="col-12 col-md-8">
+            <input class="note-title" placeholder="Note Title" maxlength="28" type="text"/>
             <textarea class="note-textarea" placeholder="Note Text"></textarea>
           </div>
         </div>
@@ -49,5 +47,7 @@
     </main>
 
     <script src="/assets/js/index.js"></script>
+
   </body>
+  
 </html>

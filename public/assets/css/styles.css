@@ -1,27 +1,36 @@
+:root {
+  --sage: #CACAAA;
+  --coolGrey: #8B8BBB;
+  --russianViolet: #372554;
+  --darkPurple: #231123;
+  --oliveDrab7: #494331; 
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #8B8BBB;
+  background-color: var(--coolGrey);
 }
 
 .navbar {
-  background-color: #231123;
+  background-color: var(--darkPurple);
 }
 
 .navbar a {
   color: white;
+  font-weight: bold;
 }
 
-.jumbotron, .card, .note-title, .note-textarea{
-  color: #372554;
-  background-color: #CACAAA;
-  border: 5px solid #231123;
+.jumbotron, .card{
+  color: var(--russianViolet);
+  background-color: var(--sage);
+  border: 5px solid var(--darkPurple);
 }
 
 ::placeholder {
-  color: #494331;
+  color: var(--oliveDrab7);
 }
 
 .save-note {
@@ -37,34 +46,34 @@ body {
 
 .note-textarea,
 .note-title {
-  color: #000000;
+  color: #372554;
+  background-color: #CACAAA;
+  border: 2px solid #231123;
   width: 100%;
+  margin: 5px;
   outline: none;
-  border: none;
 }
 
 .note-textarea {
   resize: none;
-  height: calc(100% - 63px);
-  padding-top: 15px;
+  height: calc(90% - 63px);
+
 }
 
 .note-title {
-  height: 50px;
-  margin-top: 13px;
+  height: 80px;
   font-size: 3rem;
 }
 
 .note-title:read-only,
 .note-textarea:read-only {
-  color: #757575;
+  color: #8B8BBB;
 }
 
 .list-container .card {
-  height: calc(100vh - 70px);
+  height: 85vh;
   border-bottom: none;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin: 1rem 0;
   background-color: transparent;
 }
 
@@ -72,8 +81,6 @@ body {
   padding-left: 0;
 }
 
-.list-container .list-group,
-.list-container .list-group-item:first-child,
 .list-container .card {
   border-top: none;
   border-top-right-radius: 0;
@@ -83,6 +90,7 @@ body {
 .list-item-title {
   display: inline-block;
   width: 75%;
+  color: #372554;
 }
 
 .list-container i {
@@ -91,9 +99,27 @@ body {
 }
 
 .list-container .list-group-item {
-  border-left: none;
-  border-right: none;
+  margin: .2rem;
   padding: 20px;
   cursor: pointer;
   background-color: #CACAAA;
+}
+
+@media (max-width: 750px) {
+
+  .note-title {
+    font-size: 2rem;
+    height: 4rem;
+  }
+
+  #noteList {
+    order: 1;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0 15px;
+  }
+
+  .list-group {
+    border-top: .2rem solid #231123;
+  }
 }
