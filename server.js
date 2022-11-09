@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const notes = require('./db/db.json');
+const uid = require('uid');
 const fs = require('fs');
 
 // Initialize express
@@ -26,6 +27,7 @@ app.get('/api/notes', (req, res) => {
     res.json(notes)
 });
 
+// POST any new notes
 app.post('/api/notes', (req, res) => {
     let newNote = {
         title: req.body.title,
