@@ -8,13 +8,11 @@
   * [Questions](#questions)
 
 ## Description
-
-
-## Installation
+This simple note taking app will allow a user to type and save notes.
 
 
 ## Usage
-
+To use the app, click [HERE](https://vgonzalez-note-taker.herokuapp.com/)
 
 ## Technology
   * HTML/CSS
@@ -26,6 +24,10 @@
   * Coolors
 
 ## Images
+
+![Note Taker front page](/img/main_page_screenshot.PNG)
+
+![Note Taker note page](/img/notes-page.PNG)
 
 
 ## Questions
