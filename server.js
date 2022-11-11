@@ -27,5 +27,25 @@ app.get('/api/notes', (req, res) => {
     res.json(allNotes)
 });
 
+// POST any new notes
+app.post('/api/notes', (req, res) => {
+    const { title, text } = req.body;
+
+    if (req.body) {
+        let newNote = {
+            title,
+            text,
+            id: uid(),
+        };
+        allNotes.push(newNote);
+        fs.writeFile(path.join(__dirname, './db/db.json'), JSON.stringify(allNotes), error => {
+            if (error) {
+                console.log('There was an error logging your note, try again.');
+            }
+            res.json(newNote)
+        })
+    }
+});
+
 //Listen to server and show it is running
 app.listen(PORT, () => console.log(`App listening at http://localhost: ${PORT} 🚀`));
