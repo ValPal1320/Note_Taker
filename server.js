@@ -6,7 +6,7 @@ const { uid } = require('uid');
 const fs = require('fs');
 
 // Initialize express
-const PORT = 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 
 // Data parsing
@@ -72,4 +72,4 @@ app.delete('/api/notes/:id', (req, res) => {
 });
 
 //Listen to server and show it is running
-app.listen(PORT, () => console.log(`App listening at http://localhost: ${PORT} 🚀`));
+app.listen(port, () => console.log(`App listening at http://localhost: ${port} 🚀`));
